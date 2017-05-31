@@ -8,8 +8,8 @@
 <%= f.text_field :task_location, placeholder: "location..." %>
 <br>
 <br>
-<%= f.label :end_location %>
-<%= f.text_field :end_location, placeholder: "end location..."%>
+<%= f.label :location_id, "End Location" %>
+<%= f.select :location_id, @event.locations.collect { |location| [location.name, location.id] } %>
 <br>
 <br>
 <%= f.label :description %>

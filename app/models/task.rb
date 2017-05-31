@@ -7,7 +7,7 @@
 #  event_id      :integer
 #  location_id   :integer
 #  task_location :string
-#  end_location  :string
+#  end_location  :string ######get rid of me
 #  description   :text
 #  priority      :integer
 #  created_at    :datetime         not null
@@ -16,5 +16,5 @@
 
 class Task < ApplicationRecord
   belongs_to :event
-  belong_to :location, polymorphic: true
+  belongs_to :location
 end

@@ -8,11 +8,11 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    @event = Event.find(params[:event_id])
   end
 
   def create
     @task = Task.new(task_params)
-    byebug
     if @task.save
       flash[:success] = "you done created it~"
       redirect_to task_path(@task)
@@ -47,7 +47,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:title, :task_location, :end_location, :description, :priority, :event_id)
+    params.require(:task).permit(:title, :task_location, :description, :priority, :event_id, :location_id)
   end
 
 
