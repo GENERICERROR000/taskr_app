@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 20170530174544) do
     t.integer  "event_id"
     t.integer  "location_id"
     t.string   "task_location"
-    t.string   "end_location"
     t.text     "description"
     t.integer  "priority"
     t.datetime "created_at",    null: false

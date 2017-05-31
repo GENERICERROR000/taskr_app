@@ -1,0 +1,21 @@
+<h1>THESES ARE ALL THE EVENTS - NOTHING ELSE</h1>
+<ol>
+  <% @events.each do |event| %>
+    <p>Event Title:
+      <li>
+        <%= event.title %>
+      </li>
+    </p>
+    <p>Event Address: <%= event.address %></p>
+    <p>Start Date: <%= event.start_date %></p>
+    <p>End Date: <%= event.end_date %></p>
+    <p>On Site Locations: <br>
+      <ol>        
+      <% event.locations.each do |location| %></p>
+        <li>
+          <%= location.name %>
+        </li>
+      <% end %>
+    </ol>
+    <% end %>
+</ol>

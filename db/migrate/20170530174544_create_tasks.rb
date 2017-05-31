@@ -5,7 +5,6 @@ class CreateTasks < ActiveRecord::Migration[5.0]
       t.references :event, foreign_key: true
       t.references :location, foreign_key: true
       t.string :task_location
-      t.string :end_location
       t.text :description
       t.integer :priority
 
