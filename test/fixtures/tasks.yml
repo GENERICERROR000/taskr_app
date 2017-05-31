@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  user: one
+  task_location: MyString
+  end_location: MyString
+  description: MyText
+  priority: 
+
+two:
+  title: MyString
+  user: two
+  task_location: MyString
+  end_location: MyString
+  description: MyText
+  priority: 
