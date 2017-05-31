@@ -12,12 +12,13 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
+    byebug
     if @task.save
       flash[:success] = "you done created it~"
       redirect_to task_path(@task)
     else
       flash[:error] = "nerp!"
-      render :new
+      # render :new
     end
   end
 
@@ -48,6 +49,8 @@ class TasksController < ApplicationController
   def task_params
     params.require(:task).permit(:title, :task_location, :end_location, :description, :priority, :event_id)
   end
+
+
 
   def find_task
     @task = Task.find(params[:id])

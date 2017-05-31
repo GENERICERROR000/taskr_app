@@ -1305,3 +1305,813 @@ app/controllers/tasks_controller.rb:14:in `create'
   Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (26.0ms)
   Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (427.5ms)
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:00:26 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/wo7jwpdSNMyrIOwO2vW350DRrODeihI26WUuvL/JhAVEr4oN9zkNslasdGNZ95pp+sNW/B7LixAimcJdasZQA==", "title"=>"task1", "task_location"=>"staples", "end_location"=>"loading dock", "description"=>"get paper b*tch", "priority"=>"3", "commit"=>"Create Task"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 400 Bad Request in 34ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:49:in `task_params'
+app/controllers/tasks_controller.rb:14:in `create'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (268.5ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (66.3ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (51.1ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (475.7ms)
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:02:43 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/wo7jwpdSNMyrIOwO2vW350DRrODeihI26WUuvL/JhAVEr4oN9zkNslasdGNZ95pp+sNW/B7LixAimcJdasZQA==", "title"=>"task1", "task_location"=>"staples", "end_location"=>"loading dock", "description"=>"get paper b*tch", "priority"=>"3", "commit"=>"Create Task"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 400 Bad Request in 38ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:49:in `task_params'
+app/controllers/tasks_controller.rb:14:in `create'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (254.2ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (75.0ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (23.9ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (441.3ms)
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:03:45 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/wo7jwpdSNMyrIOwO2vW350DRrODeihI26WUuvL/JhAVEr4oN9zkNslasdGNZ95pp+sNW/B7LixAimcJdasZQA==", "title"=>"task1", "task_location"=>"staples", "end_location"=>"loading dock", "description"=>"get paper b*tch", "priority"=>"3", "commit"=>"Create Task"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 400 Bad Request in 45ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:49:in `task_params'
+app/controllers/tasks_controller.rb:14:in `create'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (312.1ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (62.9ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (41.4ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (504.9ms)
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:03:50 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/wo7jwpdSNMyrIOwO2vW350DRrODeihI26WUuvL/JhAVEr4oN9zkNslasdGNZ95pp+sNW/B7LixAimcJdasZQA==", "title"=>"task1", "task_location"=>"staples", "end_location"=>"loading dock", "description"=>"get paper b*tch", "priority"=>"3", "commit"=>"Create Task"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 400 Bad Request in 41ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:49:in `task_params'
+app/controllers/tasks_controller.rb:14:in `create'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (225.7ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (53.2ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (44.5ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (396.4ms)
+Started GET "/events/6" for 127.0.0.1 at 2017-05-31 13:03:56 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."event_id" = $1[0m  [["event_id", 6]]
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."event_id" = $1[0m  [["event_id", 6]]
+  Rendered events/show.html.erb within layouts/application (218.6ms)
+Completed 200 OK in 888ms (Views: 718.1ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:04:30 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"woyjvi93azYCA9YcxxpY5EXKQlg+1k6L/63s0jTF/noolCYZEvbH0/n15H1xFlBSfyIJsE3XSO9kgh9hs5HBKg==", "task"=>{":title"=>"task", ":task_location"=>"task", ":end_location"=>"task", ":description"=>"task", ":priority"=>"1"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: :title, :task_location, :end_location, :description, :priority
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (80.7ms)
+Completed 200 OK in 817ms (Views: 610.6ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-05-31 13:04:43 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."event_id" = $1[0m  [["event_id", 6]]
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."event_id" = $1[0m  [["event_id", 6]]
+  Rendered events/show.html.erb within layouts/application (95.9ms)
+Completed 200 OK in 659ms (Views: 620.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-05-31 13:04:59 -0400
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 685ms (Views: 665.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-05-31 13:05:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 550ms (Views: 495.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2017-05-31 13:05:05 -0400
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  Rendered events/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 520ms (Views: 497.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-05-31 13:05:10 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."event_id" = $1[0m  [["event_id", 6]]
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."event_id" = $1[0m  [["event_id", 6]]
+  Rendered events/show.html.erb within layouts/application (97.8ms)
+Completed 200 OK in 640ms (Views: 589.1ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:05:21 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yLWWjKvgzyubiJGu1jPmfGgtdapEoZaU1dAls+Lw7BQirRMrlmFjzmB+o89gP+7KUsU+QjegkPBO/9YAZaTTRA==", "task"=>{":title"=>"task", ":task_location"=>"task", ":end_location"=>"task", ":description"=>"task", ":priority"=>"1"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: :title, :task_location, :end_location, :description, :priority
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (79.1ms)
+Completed 200 OK in 717ms (Views: 619.4ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:06:17 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JLTR3AnAb6zn7ZojcUo1Cu7ya0W3UaSoEEUeR39Y1DDOrFR7NEHDSRwbqELHRj281BogrcRQosyLau30+AzrYA==", "task"=>{"title"=>"task", "task_location"=>"task", "end_location"=>"task", "description"=>"task", "priority"=>"1"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 132037ms (ActiveRecord: 8.5ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/tasks_controller.rb:15:in `create'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (387.3ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (91.3ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (33.2ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (650.2ms)
+Started GET "/tasks" for 127.0.0.1 at 2017-05-31 13:08:42 -0400
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 653ms (Views: 575.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-05-31 13:08:51 -0400
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 97ms (ActiveRecord: 6.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=new):
+  
+app/controllers/tasks_controller.rb:54:in `find_task'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (319.6ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (108.3ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.2ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (555.5ms)
+Started GET "/events" for 127.0.0.1 at 2017-05-31 13:09:03 -0400
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  Rendered events/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 674ms (Views: 593.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-05-31 13:09:14 -0400
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 33ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=new):
+  
+app/controllers/tasks_controller.rb:54:in `find_task'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (231.0ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (57.7ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (21.9ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (385.1ms)
+Started GET "/events/6" for 127.0.0.1 at 2017-05-31 13:09:44 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."event_id" = $1[0m  [["event_id", 6]]
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."event_id" = $1[0m  [["event_id", 6]]
+  Rendered events/show.html.erb within layouts/application (231.5ms)
+Completed 200 OK in 851ms (Views: 717.7ms | ActiveRecord: 11.4ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:09:56 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OTdiQ/AjupZ2xoSz5mUaILCzyhQiSLySQGeGWyhW0PrTL+fkzaIWc40wttJQaRKWiluB/FFJuvbbSHXorwLvqg==", "task"=>{":title"=>"task", ":task_location"=>"task", ":end_location"=>"task", ":description"=>"task", ":priority"=>"1"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 131870ms (ActiveRecord: 0.6ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/tasks_controller.rb:15:in `create'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (396.8ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (88.4ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (33.4ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (635.9ms)
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:12:15 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OTdiQ/AjupZ2xoSz5mUaILCzyhQiSLySQGeGWyhW0PrTL+fkzaIWc40wttJQaRKWiluB/FFJuvbbSHXorwLvqg==", "task"=>{":title"=>"task", ":task_location"=>"task", ":end_location"=>"task", ":description"=>"task", ":priority"=>"1"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 39634ms (ActiveRecord: 0.7ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/tasks_controller.rb:15:in `create'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (306.2ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (83.6ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (45.0ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (527.6ms)
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:14:06 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OTdiQ/AjupZ2xoSz5mUaILCzyhQiSLySQGeGWyhW0PrTL+fkzaIWc40wttJQaRKWiluB/FFJuvbbSHXorwLvqg==", "task"=>{":title"=>"task", ":task_location"=>"task", ":end_location"=>"task", ":description"=>"task", ":priority"=>"1"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: :title, :task_location, :end_location, :description, :priority
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (93.9ms)
+Completed 200 OK in 1183ms (Views: 658.9ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-05-31 13:14:18 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."event_id" = $1[0m  [["event_id", 6]]
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."event_id" = $1[0m  [["event_id", 6]]
+  Rendered events/show.html.erb within layouts/application (193.4ms)
+Completed 200 OK in 910ms (Views: 746.0ms | ActiveRecord: 2.9ms)
+
+
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Started GET "/tasks" for 127.0.0.1 at 2017-05-31 13:15:03 -0400
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 1105ms (Views: 1012.1ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:16:26 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fWIoRpUTNnrrOhNe1N/iVG7njkgOSLEc8mrFQkFJIxmXeq3hqJKanxDMIT9i0+riVA/FoH1Jt3hpRTbxxh0cSQ==", "title"=>"task", "task_location"=>"task", "end_location"=>"task", "description"=>"task", "priority"=>"1", "event_id"=>"6", "commit"=>"Create Task"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 400 Bad Request in 225ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:50:in `task_params'
+app/controllers/tasks_controller.rb:14:in `create'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (288.7ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (81.2ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (40.8ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (583.5ms)
+Started GET "/events/6" for 127.0.0.1 at 2017-05-31 13:17:35 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."event_id" = $1[0m  [["event_id", 6]]
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."event_id" = $1[0m  [["event_id", 6]]
+  Rendered events/show.html.erb within layouts/application (248.4ms)
+Completed 200 OK in 1011ms (Views: 814.4ms | ActiveRecord: 14.5ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:17:45 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1O7GSrc2kFX5edecPCWdlK+HWSPIWcu1iXcPZ0jCMZM+9kPtirc8sAKP5f2KKZUilW8Sy7tYzdESWPzUz5YOww==", "task"=>{":title"=>"task", ":task_location"=>"task", ":end_location"=>"task", ":description"=>"task", ":priority"=>"1", ":event_id"=>"6"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: :title, :task_location, :end_location, :description, :priority, :event_id
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (99.0ms)
+Completed 200 OK in 752ms (Views: 584.2ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:19:19 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1O7GSrc2kFX5edecPCWdlK+HWSPIWcu1iXcPZ0jCMZM+9kPtirc8sAKP5f2KKZUilW8Sy7tYzdESWPzUz5YOww==", "task"=>{":title"=>"task", ":task_location"=>"task", ":end_location"=>"task", ":description"=>"task", ":priority"=>"1", ":event_id"=>"6"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: :title, :task_location, :end_location, :description, :priority, :event_id
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (87.0ms)
+Completed 200 OK in 1049ms (Views: 575.6ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:20:45 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1O7GSrc2kFX5edecPCWdlK+HWSPIWcu1iXcPZ0jCMZM+9kPtirc8sAKP5f2KKZUilW8Sy7tYzdESWPzUz5YOww==", "task"=>{":title"=>"task", ":task_location"=>"task", ":end_location"=>"task", ":description"=>"task", ":priority"=>"1", ":event_id"=>"6"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: :title, :task_location, :end_location, :description, :priority, :event_id
+Unpermitted parameters: :title, :task_location, :end_location, :description, :priority, :event_id
+Completed 500 Internal Server Error in 102089ms (ActiveRecord: 0.6ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/tasks_controller.rb:16:in `create'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (296.1ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (99.6ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (86.6ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (575.8ms)
+Started GET "/events/6" for 127.0.0.1 at 2017-05-31 13:26:35 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."event_id" = $1[0m  [["event_id", 6]]
+  [1m[36mTask Load (13.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."event_id" = $1[0m  [["event_id", 6]]
+  Rendered events/show.html.erb within layouts/application (3669.4ms)
+Completed 500 Internal Server Error in 4048ms (ActiveRecord: 23.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `task_new_path' for #<#<Class:0x007fd4781b1418>:0x007fd4743627c0>
+Did you mean?  task_path
+               tasks_path):
+    12:   <%= task.title %>
+    13:   <% end %>
+    14: <% if admin %>
+    15:   <%= link_to "create new task", task_new_path(event_id: @event.id) %>
+    16: <% end %>
+  
+app/views/events/show.html.erb:15:in `_app_views_events_show_html_erb__2991473517425897196_70275271311840'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (685.7ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (83.4ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.9ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (881.8ms)
+Started GET "/events/6" for 127.0.0.1 at 2017-05-31 13:27:10 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."event_id" = $1[0m  [["event_id", 6]]
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."event_id" = $1[0m  [["event_id", 6]]
+  Rendered events/show.html.erb within layouts/application (75.5ms)
+Completed 200 OK in 682ms (Views: 628.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/tasks/new?event_id=6" for 127.0.0.1 at 2017-05-31 13:27:14 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (105.1ms)
+Completed 200 OK in 751ms (Views: 641.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:29:36 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p2fZddchpA7xN9mEX4FhpCTCbWhnpbQNhS40qGpWdi3oB7x2a5rHPpszqzyDzgLIs929TeT/9RirNorGzhlS9g==", "task"=>{"title"=>"task", "task_location"=>"task", "end_location"=>"task", "description"=>"task", "priority"=>"1"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 246ms (ActiveRecord: 0.5ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/tasks_controller.rb:14:in `create'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (312.2ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (66.8ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (26.8ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (520.9ms)
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:30:58 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WctlwQoZEuLGcPFhdI6BIjdPuExuwM9wWkIkfw0LWNaz0+BmN5i+Bz2GwwDCgomUDafzpB3ByRTBbdfMil9nhg==", "task"=>{"title"=>"task", "task_location"=>"task", "end_location"=>"task", "description"=>"task", "priority"=>"1"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+No template found for TasksController#create, rendering head :no_content
+Completed 204 No Content in 601ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tasks/new?event_id=6" for 127.0.0.1 at 2017-05-31 13:31:21 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (92.3ms)
+Completed 200 OK in 681ms (Views: 652.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:31:31 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NrtnMRyBGN8Qz7pbyY+lH1Z/dr7XbAkqbwH33/q4o8Tco+KWIQC0Ous5iDp/g62pbJc9VqRtD070LgRsfeyclA==", "task"=>{"title"=>"t", "task_location"=>"t", "end_location"=>"5", "description"=>"t", "priority"=>"1"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+No template found for TasksController#create, rendering head :no_content
+Completed 204 No Content in 249ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-05-31 13:32:55 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."event_id" = $1[0m  [["event_id", 6]]
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."event_id" = $1[0m  [["event_id", 6]]
+  Rendered events/show.html.erb within layouts/application (249.1ms)
+Completed 200 OK in 1190ms (Views: 779.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/tasks/new?event_id=6" for 127.0.0.1 at 2017-05-31 13:33:01 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (111.0ms)
+Completed 200 OK in 892ms (Views: 775.0ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:33:08 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MZn5OL2l0TKxMwrVrDI6aUdJJk/ofFuD5kokee2VXHh++Zw7AR6yAts3eG1wfVkF0Fb2amsmGpbIUpoXSdp4ow==", "task"=>{"title"=>"t", "task_location"=>"t", "end_location"=>"t", "description"=>"t", "priority"=>"1"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+No template found for TasksController#create, rendering head :no_content
+Completed 204 No Content in 219ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks/new?event_id=6" for 127.0.0.1 at 2017-05-31 13:39:04 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (446.5ms)
+Completed 500 Internal Server Error in 799ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for "6":String):
+    21:  <%= "1 - Higest priority & 5 - Lowest priority" %>
+    22: <br>
+    23: <br>
+    24: <%= f.hidden_field :event_id, params[:event_id] %>
+    25: <%= f.submit %>
+    26: <br>
+    27: <br>
+  
+app/views/tasks/new.html.erb:24:in `block in _app_views_tasks_new_html_erb__3152719939488073114_70275279044140'
+app/views/tasks/new.html.erb:2:in `_app_views_tasks_new_html_erb__3152719939488073114_70275279044140'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (482.3ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (112.7ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.9ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (724.8ms)
+Started GET "/events/6" for 127.0.0.1 at 2017-05-31 13:42:07 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."event_id" = $1[0m  [["event_id", 6]]
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."event_id" = $1[0m  [["event_id", 6]]
+  Rendered events/show.html.erb within layouts/application (176.8ms)
+Completed 200 OK in 923ms (Views: 710.0ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/tasks/new?event_id=6" for 127.0.0.1 at 2017-05-31 13:42:10 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (78.4ms)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    21:  <%= "1 - Higest priority & 5 - Lowest priority" %>
+    22: <br>
+    23: <br>
+    24: <%= f.hidden_field :task, :event_id, value: params[:event_id] %>
+    25: <%= f.submit %>
+    26: <br>
+    27: <br>
+  
+app/views/tasks/new.html.erb:24:in `block in _app_views_tasks_new_html_erb__3152719939488073114_70275224347260'
+app/views/tasks/new.html.erb:2:in `_app_views_tasks_new_html_erb__3152719939488073114_70275224347260'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (489.9ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (106.2ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.9ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (698.8ms)
+Started GET "/events/6" for 127.0.0.1 at 2017-05-31 13:42:36 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (32.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."event_id" = $1[0m  [["event_id", 6]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."event_id" = $1[0m  [["event_id", 6]]
+  Rendered events/show.html.erb within layouts/application (84.1ms)
+Completed 200 OK in 704ms (Views: 623.6ms | ActiveRecord: 34.6ms)
+
+
+Started GET "/tasks/new?event_id=6" for 127.0.0.1 at 2017-05-31 13:42:39 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (127.6ms)
+Completed 200 OK in 646ms (Views: 579.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:42:46 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5jUcunlRxvOsQAQTqkQebyEO/hwnPNU18gcNSaAY4NypVXm5xeqlw8ZEdqt2C30DthEuOaRmlCDcH7MnBFfEBw==", "task"=>{"title"=>"t", "task_location"=>"t", "end_location"=>"t", "description"=>"t", "priority"=>"1", "event_id"=>"6"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+No template found for TasksController#create, rendering head :no_content
+Completed 204 No Content in 241ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/tasks/new?event_id=6" for 127.0.0.1 at 2017-05-31 13:43:06 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (84.7ms)
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    21:  <%= "1 - Higest priority & 5 - Lowest priority" %>
+    22: <br>
+    23: <br>
+    24: <%= f.hidden_field :task, :event_id, params[:event_id] %>
+    25: <%= f.submit %>
+    26: <br>
+    27: <br>
+  
+app/views/tasks/new.html.erb:24:in `block in _app_views_tasks_new_html_erb__3152719939488073114_70275292812000'
+app/views/tasks/new.html.erb:2:in `_app_views_tasks_new_html_erb__3152719939488073114_70275292812000'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (480.9ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (96.6ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.1ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (706.7ms)
+Started GET "/tasks/new?event_id=6" for 127.0.0.1 at 2017-05-31 13:44:22 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (97.1ms)
+Completed 200 OK in 738ms (Views: 671.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:44:30 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mEYFVpaJNHrbgCCdQYKj6HuLHbGgBYfZFiEo37v4oWByXoDxqwiYnyB2Evz3jqteQWNWWdMEgb2NDttsPKyeMA==", "task"=>{"title"=>"t", "task_location"=>"t", "end_location"=>"t", "description"=>"t", "priority"=>"1", "event_id"=>"6"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+No template found for TasksController#create, rendering head :no_content
+Completed 204 No Content in 190ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-05-31 13:48:45 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."event_id" = $1[0m  [["event_id", 6]]
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."event_id" = $1[0m  [["event_id", 6]]
+  Rendered events/show.html.erb within layouts/application (105.3ms)
+Completed 200 OK in 815ms (Views: 743.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/tasks/new?event_id=6" for 127.0.0.1 at 2017-05-31 13:48:49 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mUser Load (14.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (112.1ms)
+Completed 200 OK in 870ms (Views: 742.5ms | ActiveRecord: 14.2ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:49:15 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rcv9ldHaAwbHPCCJVs9N+riZGH1KHlbsLCNT0iAz0+0Kq5iWbWFgNq04UjGKgC6WL4bIWMlEF/kCO+28hHz3Ng==", "task"=>{"title"=>"t", "task_location"=>"t", "end_location"=>"t", "description"=>"t", "priority"=>"1", "event_id"=>"6"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+No template found for TasksController#create, rendering head :no_content
+Completed 204 No Content in 198ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/tasks/new?event_id=6" for 127.0.0.1 at 2017-05-31 13:50:27 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (128.9ms)
+Completed 500 Internal Server Error in 544ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    21:  <%= "1 - Higest priority & 5 - Lowest priority" %>
+    22: <br>
+    23: <br>
+    24: <%= f.hidden_field :task, :event_id, value: params[:event_id] %>
+    25: <%= f.submit %>
+    26: <br>
+    27: <br>
+  
+app/views/tasks/new.html.erb:24:in `block in _app_views_tasks_new_html_erb__3152719939488073114_70275227630560'
+app/views/tasks/new.html.erb:2:in `_app_views_tasks_new_html_erb__3152719939488073114_70275227630560'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (552.4ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (113.9ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (50.4ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (818.3ms)
+Started GET "/events/6" for 127.0.0.1 at 2017-05-31 13:50:53 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."event_id" = $1[0m  [["event_id", 6]]
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."event_id" = $1[0m  [["event_id", 6]]
+  Rendered events/show.html.erb within layouts/application (209.9ms)
+Completed 200 OK in 1130ms (Views: 904.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/tasks/new?event_id=6" for 127.0.0.1 at 2017-05-31 13:50:57 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (102.9ms)
+Completed 200 OK in 785ms (Views: 722.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-05-31 13:51:04 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tqw8xRZ14gAAmrjL+wcpJ0eNgaKHiwtwL+Wbla0sxxsBzFnGqs6BMGqeynMnSEpL0JJRhwTRSmUB/SX7CWPjwA==", "task"=>{"title"=>"t", "task_location"=>"t", "end_location"=>"t", "description"=>"t", "priority"=>"1", "event_id"=>"6"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (10.7ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "user_id", "event_id", "task_location", "end_location", "description", "priority", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "t"], ["user_id", 1], ["event_id", 6], ["task_location", "t"], ["end_location", "t"], ["description", "t"], ["priority", 1], ["created_at", "2017-05-31 17:56:09.338184"], ["updated_at", "2017-05-31 17:56:09.338184"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "users" ("password_digest", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["password_digest", "$2a$10$86Pu04vYkLLRv.uEppzInu5k.n7Ajv6b8ylLh.IJGKy0NDGfZp1eS"], ["created_at", "2017-05-31 17:59:50.244795"], ["updated_at", "2017-05-31 17:59:50.244795"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "tasks" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 6], ["created_at", "2017-05-31 18:00:45.080624"], ["updated_at", "2017-05-31 18:00:45.080624"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 2299562ms (ActiveRecord: 40.0ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/tasks_controller.rb:16:in `create'
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (305.1ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (73.8ms)
+  Rendering /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (34.7ms)
+  Rendered /Users/terrancekoar/.rvm/gems/ruby-2.3.4/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (506.2ms)
