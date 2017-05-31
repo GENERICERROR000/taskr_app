@@ -1,0 +1,12 @@
+<h2>Edit Event</h2>
+<%= form_for @event do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<%= f.label :address %>
+<%= f.text_field :address %>
+<%= f.label :start_date %>
+<%= f.datetime_field :start_date %>
+<%= f.label :end_date %>
+<%= f.datetime_field :end_date %>
+<%= f.submit %>
+<% end %>

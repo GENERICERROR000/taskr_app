@@ -1,0 +1,43 @@
+<h2><%= @event.title %></h2>
+<% if !@event.locations.nil? %>
+<h3>Locations:</h3>
+  <ol>
+    <% @event.locations.each do |location| %>
+      <li><%= location.name %></li>
+    <% end %>
+  </ol>
+<% end %>
+<h3>Tasks:</h3>
+<% @event.tasks.each do |task| %>
+  <%= task.title %>
+  <% end %>
+<% if admin %>
+<h3>Create New Task:</h3>
+  <%= form_tag new_task_path do %>
+  <%= label_tag :title %>
+  <%= text_field_tag :title, nil, placeholder: "title..." %>
+  <br>
+  <br>
+  <%= label_tag :task_location %>
+  <%= text_field_tag :task_location, nil, placeholder: "location..." %>
+  <br>
+  <br>
+  <%= label_tag :end_location %>
+  <%= text_field_tag :end_location, nil, placeholder: "end location..."%>
+  <br>
+  <br>
+  <%= label_tag :description %>
+  <%= text_area_tag :description, nil, placeholder: "description..."%>
+  <br>
+  <br>
+  <%= label_tag :priority %>
+  <%= select_tag :priority, options_for_select([1, 2, 3, 4, 5]) %>
+   <%= "1 - Higest priority & 5 - Lowest priority" %>
+  <br>
+  <br>
+  <% hidden_field_tag :event_id, "#{@event.id}" %>
+  <%= submit_tag "Create Task" %>
+  <br>
+  <br>
+  <% end %>
+<% end %>

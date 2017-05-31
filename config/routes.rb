@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'application#home'
   resources :events
-  resources :tasks
+  resources :tasks, except: [:new, :create]
+  post '/tasks', to: 'tasks#create', as: 'new_task'
   resources :users, except: [:index]
   get '/signin', to: 'sessions#new'
   post '/signin', to: 'sessions#create'

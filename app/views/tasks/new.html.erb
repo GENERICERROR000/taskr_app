@@ -1,0 +1,27 @@
+<h2>Create Task</h2>
+<%= form_for @task do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title, placeholder: "title..." %>
+<br>
+<br>
+<%= f.label :task_location %>
+<%= f.text_field :task_location, placeholder: "location..." %>
+<br>
+<br>
+<%= f.label :end_location %>
+<%= f.text_field :end_location, placeholder: "end location..."%>
+<br>
+<br>
+<%= f.label :description %>
+<%= f.text_area :description, placeholder: "description..."%>
+<br>
+<br>
+<%= f.label :priority %>
+<%= f.select :priority, [1, 2, 3, 4, 5] %>
+ <%= "1 - Higest priority & 5 - Lowest priority" %>
+<br>
+<br>
+<%= f.submit %>
+<br>
+<br>
+<% end %>

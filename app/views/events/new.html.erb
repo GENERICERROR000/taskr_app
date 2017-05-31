@@ -1,0 +1,24 @@
+<h2>Create Event</h2>
+<%= form_for @event do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title, placeholder: "Name of Event" %>
+<br>
+<%= f.label :address %>
+<%= f.text_field :address, placeholder: "Street Address, City, State, Zip Code"%>
+<br>
+<%= f.label :start_date %>
+<%= f.datetime_field :start_date %>
+<br>
+<%= f.label :end_date %>
+<%= f.datetime_field :end_date %>
+<br>
+
+  <%= f.fields_for :locations do |l| %>
+    <%= l.label :locations %>
+    <%= l.text_area :locations, placeholder: "enter locations separated by commas (i.e. green room, loading dock 1, ...)" %>
+  <% end %>
+
+<br>
+<%= f.submit %>
+<br>
+<% end %>
