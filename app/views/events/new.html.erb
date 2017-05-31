@@ -12,12 +12,10 @@
 <%= f.label :end_date %>
 <%= f.datetime_field :end_date %>
 <br>
-
   <%= f.fields_for :locations do |l| %>
     <%= l.label :locations %>
     <%= l.text_area :locations, placeholder: "enter locations separated by commas (i.e. green room, loading dock 1, ...)" %>
   <% end %>
-
 <br>
 <%= f.submit %>
 <br>

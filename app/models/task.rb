@@ -4,8 +4,8 @@
 #
 #  id            :integer          not null, primary key
 #  title         :string
-#  user_id       :integer
 #  event_id      :integer
+#  location_id   :integer
 #  task_location :string
 #  end_location  :string
 #  description   :text
@@ -15,7 +15,6 @@
 #
 
 class Task < ApplicationRecord
-  belongs_to :user
   belongs_to :event
-  has_many :locations
+  belong_to :location, polymorphic: true
 end
