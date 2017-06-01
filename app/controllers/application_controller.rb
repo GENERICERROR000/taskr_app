@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :signed_in, :admin
 
   def home
+    @tasks = Task.order("updated_at DESC").first(8)
   end
 
   private

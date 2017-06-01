@@ -43,64 +43,24 @@
 
       <!-- Page Features -->
       <div class="row text-center">
-
+        <% @tasks.each do |task| %>
         <div class="col-md-3 col-sm-6 hero-feature">
           <div class="thumbnail">
-            <img src="http://placehold.it/800x500" alt="">
+            <img src="http://lorempixel.com/800/500/abstract/" alt="">
             <div class="caption">
-              <h3>Feature Label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <p>
-                <a href="#" class="btn btn-primary">Buy Now!</a>
-                <a href="#" class="btn btn-default">More Info</a>
-              </p>
+              <h3>
+                <%= task.title %></h3>
+              <h5>Taskr:
+                <%= task.user ? task.user.name : "Still up for grabs!" %>
+              </h5>
+              <h5>Description:
+                <%= task.description %></h5>
             </div>
           </div>
         </div>
-
-        <div class="col-md-3 col-sm-6 hero-feature">
-          <div class="thumbnail">
-            <img src="http://placehold.it/800x500" alt="">
-            <div class="caption">
-              <h3>Feature Label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <p>
-                <a href="#" class="btn btn-primary">Buy Now!</a>
-                <a href="#" class="btn btn-default">More Info</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 hero-feature">
-          <div class="thumbnail">
-            <img src="http://placehold.it/800x500" alt="">
-            <div class="caption">
-              <h3>Feature Label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <p>
-                <a href="#" class="btn btn-primary">Buy Now!</a>
-                <a href="#" class="btn btn-default">More Info</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 hero-feature">
-          <div class="thumbnail">
-            <img src="http://placehold.it/800x500" alt="">
-            <div class="caption">
-              <h3>Feature Label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <p>
-                <a href="#" class="btn btn-primary">Buy Now!</a>
-                <a href="#" class="btn btn-default">More Info</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
+        <% end %>
       </div>
+
       <!-- /.row -->
 
       <hr>
