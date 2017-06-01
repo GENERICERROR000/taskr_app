@@ -3,4 +3,5 @@
 <p>Email: <%= @user.email %></p>
 <p>Phone: <%= @user.phone %></p>
 <p>Manager? <%= @user.manager == true ? 'You Is Manager' : 'You Is Not Manager'  %></p>
+<%= link_to "Edit", edit_user_path(id: @user.id) %>
 <%= link_to 'Delete', user_path(@user), method: :delete %>
