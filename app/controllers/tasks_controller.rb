@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :signed_in, except: [:index]
-  before_action :find_task, only: [:show, :edit, :update, :delete]
+  before_action :find_task, only: [:show, :edit, :update, :delete, :add_task, :complete_task, :remove_task]
 
   def index
     @tasks = Task.all
@@ -43,11 +43,26 @@ class TasksController < ApplicationController
     flash[:success] = "gewd jerb!"
     redirect_to root_path
   end
+#user should be able to add task if it is not complete or pending
+  def add_task
+    @task.update(user: current_user, status: "in progress")
+    redirect_to event_path(@task.event)
+  end
+#only an option if task.user_id == current_user.id && only an option if the task status is pending
+  def complete_task
+    @task.update(status: "complete")
+    redirect_to event_path(@task.event)
+  end
+#only an option if task.user_id == current_user.id && if the task status is pending
+  def remove_task
+    @task.update(user: nil, status: "open")
+    redirect_to event_path(@task.event)
+  end
 
   private
 
   def task_params
-    params.require(:task).permit(:title, :task_location, :description, :priority, :event_id, :location_id)
+    params.require(:task).permit(:title, :task_location, :description, :priority, :event_id, :location_id, :status)
   end
 
   def find_task
