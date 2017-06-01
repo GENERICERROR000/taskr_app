@@ -12,11 +12,10 @@
  */
  @import 'bootstrap';
 
-
- .navbar-inverse {
-     background-color: #EF7A85;
-     border-color: #EF7A85;
- }
+.navbar.navbar-inverse {
+    background-color: #EF7A85;
+    border: 0px
+}
 
  .nav.navbar-nav li a {
      color: #FFC2E2;

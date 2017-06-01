@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :signed_in, except: [:index]
-  before_action :find_task, only: [:show, :edit, :update, :delete, :add_task, :complete_task, :remove_task]
+  before_action :find_task, only: [:show, :edit, :update, :destroy, :add_task, :complete_task, :remove_task]
 
   def index
     @tasks = Task.all
