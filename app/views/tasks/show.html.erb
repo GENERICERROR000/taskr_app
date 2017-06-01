@@ -1,1 +1,9 @@
-<h1>task</h1>
+<h1>YOU GOT TASK</h1>
+<p>Title: <%= @task.title %></p>
+<p>Event: <%= link_to "#{@task.event.title}", event_path(id: @task.event.id) %></p>
+<p>Priority: <%= @task.priority %></p>
+<p>Task Location: <%= @task.task_location %></p>
+<p>End Location: <%= @task.location.name %></p>
+<p>Notes: <%= @task.description %></p>
+<%= link_to "Edit", edit_task_path(id: @task.id) %>
+<%= link_to 'Delete', task_path(@task), method: :delete %>

@@ -9,9 +9,11 @@
 <% end %>
 <h3>Tasks:</h3>
 <% @event.tasks.each do |task| %>
-  <%= task.title %>
+  <%= link_to "#{task.title}", task_path(id: @event.id) %><br>
   <% end %>
+  <br>
 <% if admin %>
+  <%= link_to "Edit", edit_event_path(id: @event.id) %>
   <%= link_to "create new task", new_task_path(event_id: @event.id) %>
-  <%= link_to "delete", @event, :method=>:delete%>
+  <%= link_to 'Delete', task_path(@event), method: :delete %>
 <% end %>

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: [:show, :edit, :update]
   before_action :signed_in, except: [:new, :create]
+  before_action :find_user, only: [:show, :edit, :update, :destroy]
 
   def index
     @users = User.all
@@ -39,7 +39,8 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user.delete
+    @user.destroy
+    session[:user_id] = nil
     flash[:success] = "gewd jerb!"
     redirect_to root_path
   end

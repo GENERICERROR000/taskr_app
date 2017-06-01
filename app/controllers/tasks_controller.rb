@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :signed_in, except: [:index]
-  before_action :find_task, only: [:show, :edit, :update]
+  before_action :find_task, only: [:show, :edit, :update, :delete]
 
   def index
     @tasks = Task.all
@@ -39,7 +39,7 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @task.delete
+    @task.destroy
     flash[:success] = "gewd jerb!"
     redirect_to root_path
   end
@@ -49,8 +49,6 @@ class TasksController < ApplicationController
   def task_params
     params.require(:task).permit(:title, :task_location, :description, :priority, :event_id, :location_id)
   end
-
-
 
   def find_task
     @task = Task.find(params[:id])

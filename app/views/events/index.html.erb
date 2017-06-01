@@ -1,9 +1,13 @@
 <h1>THESES ARE ALL THE EVENTS AND THEIR TASKS</h1>
+<% if admin %>
+  <%= link_to "+ New Event", new_event_path %>
+<% end %>
+
 <ol>
   <% @events.each do |event| %>
     <p>
       <li>
-        Event Title: <%= event.title %>
+        Event: <%= link_to "#{event.title}", event_path(id: event.id) %>
       </li>
     </p>
     <p>Event Address: <%= event.address %></p>

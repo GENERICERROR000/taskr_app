@@ -46,7 +46,7 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    @event.delete
+    @event.destroy
     flash[:success] = "gewd jerb!"
     redirect_to root_path
   end

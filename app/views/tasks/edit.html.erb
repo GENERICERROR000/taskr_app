@@ -1,24 +1,24 @@
 <h2>Edit Task</h2>
 <%= form_for @task do |f| %>
-<%= f.label :title %>
-<%= f.text_field :title %>
-<br>
-<br>
-<%= f.label :task_location %>
-<%= f.text_field :task_location %>
-<br>
-<br>
-<%= f.label :end_location %>
-<%= f.text_field :end_location %>
-<br>
-<br>
-<%= f.label :description %>
-<%= f.text_area :description %>
-<br>
-<br>
-<%= f.label :priority %>
-<%= f.select :priority, [1..5] %>
-<br>
-<br>
-<%= f.submit %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <br>
+  <%= f.label :task_location %>
+  <%= f.text_field :task_location %>
+  <br>
+  <br>
+  <%= f.label :location_id, "End Location" %>
+  <%= f.select :location_id, @task.event.locations.collect { |location| [location.name, location.id] } %>
+  <br>
+  <br>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <br>
+  <br>
+  <%= f.label :priority %>
+  <%= f.select :priority, [1..5] %>
+  <br>
+  <br>
+  <%= f.submit %>
 <% end %>
