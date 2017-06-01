@@ -14,5 +14,5 @@
   <br>
 <% if admin %>
   <%= link_to "create new task", new_task_path(event_id: @event.id) %>
-  <%= link_to "delete", @event, :method=>:delete%>
+  <%= link_to 'Delete', task_path(@task), method: :delete %>
 <% end %>

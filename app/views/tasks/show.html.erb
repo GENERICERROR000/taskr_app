@@ -5,5 +5,4 @@
 <p>Task Location: <%= @task.task_location %></p>
 <p>End Location: <%= @task.location.name %></p>
 <p>Notes: <%= @task.description %></p>
-
-<%= link_to "delete", @task, :method=>:delete%>
+<%= link_to 'Delete', task_path(@task), method: :delete %>
