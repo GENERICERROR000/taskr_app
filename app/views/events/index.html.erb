@@ -1,17 +1,17 @@
-<h1>THESES ARE ALL THE EVENTS - NOTHING ELSE</h1>
+<h1>THESES ARE ALL THE EVENTS AND THEIR TASKS</h1>
 <ol>
   <% @events.each do |event| %>
-    <p>Event Title:
+    <p>
       <li>
-        <%= event.title %>
+        Event Title: <%= event.title %>
       </li>
     </p>
     <p>Event Address: <%= event.address %></p>
     <p>Start Date: <%= event.start_date %></p>
     <p>End Date: <%= event.end_date %></p>
     <p>On Site Locations: <br>
-      <ol>        
-      <% event.locations.each do |location| %></p>
+      <ol>
+      <% event.locations.reverse.each do |location| %></p>
         <li>
           <%= location.name %>
         </li>

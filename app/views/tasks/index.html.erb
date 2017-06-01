@@ -1,9 +1,9 @@
 <h1>THESES ARE ALL THE TASKS - NOTHING ELSE</h1>
 <ol>
   <% @tasks.each do |task| %>
-    <p>Task Title:
+    <p>
       <li>
-        <%= task.title %>
+        Task Title: <%= task.title %>
       </li>
     </p>
     <p>Event: <%= task.event.title %></p>

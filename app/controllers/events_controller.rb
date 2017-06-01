@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :signed_in, except: [:index]
   before_action :admin, except: [:index, :show]
-  before_action :find_event, only: [:show, :edit, :update]
+  before_action :find_event, only: [:show, :edit, :update, :destroy]
 
   def index
     @events = Event.all
@@ -13,7 +13,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    
+
     if @event.save
       flash[:success] = "you done created it~"
       redirect_to event_path(@event)
