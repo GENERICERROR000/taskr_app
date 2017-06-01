@@ -13,8 +13,11 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-
-    if @event.save
+    if params[:event][:locations]["locations"].empty?
+      flash[:error] = "You forgot to add a location! Please add at least one (1) location."
+      render :new
+    elsif
+      @event.save
       flash[:success] = "you done created it~"
       redirect_to event_path(@event)
     else
@@ -22,10 +25,9 @@ class EventsController < ApplicationController
       render :new
     end
 
-    if !params[:event][:locations].nil?
-      params[:event][:locations]["locations"].split(", ").each do |location|
-        Location.create(name: location, event_id: @event.id)
-      end
+    params[:event][:locations]["locations"].split(", ").each do |location|
+      Location.create(name: location, event_id: @event.id)
+
     end
   end
 

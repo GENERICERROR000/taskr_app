@@ -48,6 +48,15 @@ class TasksController < ApplicationController
     @task.update(user: current_user, status: "in progress")
     redirect_to event_path(@task.event)
   end
+
+  # def validate_event
+  #   current_user.events.each do |event|
+  #     if event.end_date < @task.event.start_time || @task.event.end_time < event.start_time
+  #       flash[:error] = "This event conflicts with your current schedule!"
+  #       render task_path(@task)
+  #     else
+  #     end
+  # end
 #only an option if task.user_id == current_user.id && only an option if the task status is pending
   def complete_task
     @task.update(status: "complete")
