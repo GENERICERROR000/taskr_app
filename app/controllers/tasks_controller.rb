@@ -43,7 +43,7 @@ class TasksController < ApplicationController
     flash[:success] = "gewd jerb!"
     redirect_to root_path
   end
-#user should be able to add task if it is not complete or pending
+
   def add_task
     @task.update(user: current_user, status: "in progress")
     redirect_to event_path(@task.event)

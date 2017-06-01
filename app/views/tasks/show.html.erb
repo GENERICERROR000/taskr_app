@@ -9,6 +9,8 @@
 <p>Status: <%= @task.status %></p>
 <%= link_to "Edit", edit_task_path(id: @task.id) %>
 <%= link_to 'Delete', task_path(@task), method: :delete %>
-<%= link_to "+ Take Task", add_task_path(@task) %>
-<%= link_to "- Drop Task", remove_task_path(@task) %>
-<%= link_to "Finished Task", complete_task_path(@task) %>
+
+
+<%= link_to "+ Take Task", add_task_path(@task) if @task.status == "open" %>
+<%= link_to "- Drop Task", remove_task_path(@task) if @task.user == current_user && @task.status == "in progress" %>
+<%= link_to "Finished Task", complete_task_path(@task) if @task.user == current_user && @task.status == "in progress" %>
