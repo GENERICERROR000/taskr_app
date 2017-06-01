@@ -15,4 +15,12 @@ class Event < ApplicationRecord
   has_and_belongs_to_many :users
   has_many :tasks
   has_many :locations
+
+  def start_time
+    self.start_date
+  end
+  
+  def end_time
+    self.end_date
+  end
 end

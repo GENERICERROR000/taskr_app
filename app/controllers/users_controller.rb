@@ -23,6 +23,12 @@ class UsersController < ApplicationController
   end
 
   def show
+    @events = []
+    @user.tasks.each do |task|
+      if !@events.include?(task.event)
+        @events << task.event
+      end
+    end
   end
 
   def edit
@@ -44,6 +50,8 @@ class UsersController < ApplicationController
     flash[:success] = "gewd jerb!"
     redirect_to root_path
   end
+
+
 
   private
 

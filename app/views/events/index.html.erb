@@ -2,6 +2,7 @@
 <% if admin %>
   <h3><%= link_to "+ New Event", new_event_path, class: "btn btn-primary" %></h3>
 <% end %>
+
 <div class="row text-center">
   <% @events.each do |event| %>
     <div class="col-md-3 col-sm-6 hero-feature">
@@ -13,7 +14,7 @@
       <h5>Start Date: <%= event.start_date %></h5>
       <h5>End Date: <%= event.end_date %></h5>
           <p>
-            <%= link_to "Details", event_path(id: event.id), class: "btn btn-primary" %>
+            <%= link_to "Details", event_path(event), class: "btn btn-primary" %>
           </p>
         </div>
       </div>
