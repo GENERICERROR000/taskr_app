@@ -12,3 +12,25 @@
  */
 
  @import 'bootstrap';
+
+
+ .navbar-inverse {
+     background-color: #EF7A85;
+     border-color: #EF7A85;
+ }
+
+ .nav.navbar-nav li a {
+     color: #FFC2E2;
+     font-size: 20px;
+ }
+
+ .container {
+   width: auto;
+ }
+
+ .jumbotron.hero-spacer {
+   background-color: #6E44FF;
+   color: #FFC2E2;
+ }
+
+ul.navbar-inverse a:hover { color: #FFC2E2 !important; }

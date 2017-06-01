@@ -1,25 +1,22 @@
 <h1>THESES ARE ALL THE EVENTS AND THEIR TASKS</h1>
 <% if admin %>
-  <%= link_to "+ New Event", new_event_path %>
+  <h3><%= link_to "+ New Event", new_event_path, class: "btn btn-primary" %></h3>
 <% end %>
-
-<ol>
+<div class="row text-center">
   <% @events.each do |event| %>
-    <p>
-      <li>
-        Event: <%= link_to "#{event.title}", event_path(id: event.id) %>
-      </li>
-    </p>
-    <p>Event Address: <%= event.address %></p>
-    <p>Start Date: <%= event.start_date %></p>
-    <p>End Date: <%= event.end_date %></p>
-    <p>On Site Locations: <br>
-      <ol>
-      <% event.locations.reverse.each do |location| %></p>
-        <li>
-          <%= location.name %>
-        </li>
-      <% end %>
-    </ol>
+    <div class="col-md-3 col-sm-6 hero-feature">
+      <div class="thumbnail">
+        <img src="http://lorempixel.com/800/500/abstract/" alt="">
+        <div class="caption">
+      <h3> <%= event.title %></h3>
+      <h5>Event Address: <%= event.address %></h5>
+      <h5>Start Date: <%= event.start_date %></h5>
+      <h5>End Date: <%= event.end_date %></h5>
+          <p>
+            <%= link_to "Details", event_path(id: event.id), class: "btn btn-primary" %>
+          </p>
+        </div>
+      </div>
+    </div>
     <% end %>
-</ol>
+</div>

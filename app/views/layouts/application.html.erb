@@ -17,32 +17,54 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   </head>
 
-  <body class="container">
+  <body>
 
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href='/'>taskr</a>
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
         </div>
-        <ul class="nav navbar-nav">
-          <% if !current_user %>
-            <li class="active"><%= link_to "Sign In", signin_path %></li>
-            <li class="active"><%= link_to "Sign Up", new_user_path %></li>
-          <% else %>
-          <li><%= link_to "Ma P-file", user_path(current_user) %></li>
-          <li><%= link_to "All Events", events_path %></li>
-          <li><%= link_to "All Tasks", tasks_path %></li>
-          </ul>
-          <button class="btn btn-danger navbar-btn"><%= link_to "Sign Out", signout_path, method: :delete %></button>
-          <% end %>
+          <div>
+            <a class="navbar-brand" href='/'>taskr</a>
+             <div class="navbar-collapse collapse">
+              <% if current_user %>
+              <ul class="nav navbar-nav navbar-left">
+                <li class="button"><%= link_to "All Events", events_path %></li>
+                <li class="button"><%= link_to "All Tasks", tasks_path %></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to "Ma P-file", user_path(current_user) %></li>
+                <li><%= link_to "Sign Out", signout_path, method: :delete %></li>
+              </ul>
+              <% else %>
+              <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to "Sign In", signin_path %></li>
+                <li><%= link_to "Sign Up", new_user_path %></li>
+              </ul>
+              <% end %>
+          </div>
+        </div>
       </div>
     </nav>
 
 
-
+  <div class="container">
     <%= yield %>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>task &copy; taskr Inc. 2017</p>
+      </div>
+    </div>
+  </footer>
+</div>
 
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
