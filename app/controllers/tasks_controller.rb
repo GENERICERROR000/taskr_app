@@ -10,10 +10,10 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     if @task.save
-      flash[:success] = "you done created it~"
+      flash[:success] = "You Made A Task"
       redirect_to task_path(@task)
     else
-      flash[:error] = "nerp!"
+      flash[:error] = "Making A Task Didn't Work"
       # render :new
     end
   end
@@ -26,17 +26,17 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      flash[:success] = "you done did it~"
+      flash[:success] = "Task Changes Were Applied"
       redirect_to task_path(@task)
     else
-      flash[:error] = "no no no..."
+      flash[:error] = "Task Updated Failed Yo"
       render :update
     end
   end
 
   def destroy
     @task.destroy
-    flash[:success] = "gewd jerb!"
+    flash[:success] = "Destroyed Dat Task"
     redirect_to root_path
   end
 

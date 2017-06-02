@@ -14,14 +14,14 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     if params[:event][:locations]["locations"].empty?
-      flash[:error] = "You forgot to add a location! Please add at least one (1) location."
+      flash[:error] = "At Least One Location Is Required - So Do That!"
       render :new
     elsif
       @event.save
-      flash[:success] = "you done created it~"
+      flash[:success] = "Event Was Created - So That's Cool."
       redirect_to event_path(@event)
     else
-      flash[:error] = "nerp!"
+      flash[:error] = "Event No Created - I Don't Why..."
       render :new
     end
 
@@ -39,17 +39,17 @@ class EventsController < ApplicationController
 
   def update
     if @event.update(event_params)
-      flash[:success] = "you done did it~"
+      flash[:success] = "Changes Applied - Solid."
       redirect_to event_path(@event)
     else
-      flash[:error] = "no no no..."
+      flash[:error] = "So The Changes Couldn't Be Applied..."
       render :update
     end
   end
 
   def destroy
     @event.destroy
-    flash[:success] = "gewd jerb!"
+    flash[:success] = "Event Destroyed - Do You Feel All Mighty And Powerful Now!?"
     redirect_to root_path
   end
 
