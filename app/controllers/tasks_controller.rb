@@ -30,7 +30,7 @@ class TasksController < ApplicationController
       redirect_to task_path(@task)
     else
       flash[:error] = "Task Updated Failed Yo"
-      render :update
+      render :edit
     end
   end
 
