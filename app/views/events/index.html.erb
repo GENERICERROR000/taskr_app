@@ -1,4 +1,4 @@
-<h1 class="panel-body card-info-head">Here We Find A List Of All Events - Just Amazing&nbsp&nbsp&nbsp<%= link_to "+ New Event", new_event_path, class: "btn btn-primary my-button" if admin %></h1>
+<h1 class="panel-body card-info-head">Here We Find A List Of All Events - Just Amazing<%= link_to "+ New Event", new_event_path, class: "btn btn-primary my-button navbar-right" if admin %></h1>
 <br>
 <div class="row text-center">
   <% @events.each do |event| %>
