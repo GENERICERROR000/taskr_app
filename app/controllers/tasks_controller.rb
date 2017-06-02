@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :signed_in, except: [:index]
-  before_action :find_task, only: [:show, :edit, :update, :destroy, :add_task, :complete_task, :remove_task]
+  before_action :find_task, only: [:show, :edit, :update, :destroy, :add_task, :complete_task, :remove_task, :validate_event]
 
   def index
     @tasks = Task.all
@@ -49,13 +49,23 @@ class TasksController < ApplicationController
     redirect_to event_path(@task.event)
   end
 
+  # def add_task
+  #   if validate_event
+  #     @task.update(user: current_user, status: "in progress")
+  #     redirect_to event_path(@task.event)
+  #   else
+  #     flash[:error] = "This event conflicts with your current schedule!"
+  #     redirect_to task_path(@task)
+  #   end
+  # end
+
   # def validate_event
-  #   current_user.events.each do |event|
-  #     if event.end_date < @task.event.start_time || @task.event.end_time < event.start_time
-  #       flash[:error] = "This event conflicts with your current schedule!"
-  #       render task_path(@task)
-  #     else
+  #   current_user.events.each do |e|
+  #     if e.end_date < @task.event.start_date || @task.event.end_date < e.start_date
+  #       puts true
   #     end
+  #   end
+  #   false
   # end
 #only an option if task.user_id == current_user.id && only an option if the task status is pending
   def complete_task
