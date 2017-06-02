@@ -9,7 +9,7 @@
 <br>
 <%= f.datetime_field :end_date, placeholder: "(Optional)", class: "my-form-field ph", label_class: "feed" %>
 <br>
-  <%= f.fields_for :locations do |l| %>
+  <%= f.fields_for :locations, label: "On-Site Locations" do |l| %>
     <%= l.text_area :locations, placeholder: "(Required) Enter locations separated by commas (i.e. green room, loading dock 1, ...)", class: "my-form-field ph", label_class: "feed" %>
   <% end %>
 <br>
