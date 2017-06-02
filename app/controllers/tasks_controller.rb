@@ -1,10 +1,6 @@
 class TasksController < ApplicationController
-  before_action :signed_in, except: [:index]
+  before_action :signed_in
   before_action :find_task, only: [:show, :edit, :update, :destroy, :add_task, :complete_task, :remove_task, :validate_event]
-
-  def index
-    @tasks = Task.all
-  end
 
   def new
     @task = Task.new
@@ -68,11 +64,12 @@ class TasksController < ApplicationController
   #   false
   # end
 #only an option if task.user_id == current_user.id && only an option if the task status is pending
+
   def complete_task
     @task.update(status: "complete")
     redirect_to event_path(@task.event)
   end
-#only an option if task.user_id == current_user.id && if the task status is pending
+
   def remove_task
     @task.update(user: nil, status: "open")
     redirect_to event_path(@task.event)

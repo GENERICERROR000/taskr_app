@@ -12,13 +12,66 @@
  */
  @import 'bootstrap';
 
-.navbar.navbar-inverse {
-    background-color: #EF7A85;
-    border: 0px
+.main {
+  background-color: #FFC2E2;
 }
 
- .nav.navbar-nav li a {
-     color: #FFC2E2;
+.brenden {
+  max-width: 100px;
+  margin-top: auto;
+
+}
+
+.navbar-brand {
+
+  color: white;
+  background-color: #FFAEC7;
+}
+
+.navbar.navbar-inverse {
+    background-color: #FFAEC7;
+    border-color: #FFAEC7;
+}
+
+.col-lg-12 {
+  color: #EF7A85;
+}
+
+.thumbnail {
+  background-color: #B892FF;
+  border-color: #B892FF;
+}
+
+.card-info-head {
+  color: #B892FF;
+  background-color: #6E44FF;
+  border-radius: 25px;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.card-info-body {
+  color: #6E44FF;
+  background-color: #B892FF;
+  border-radius: 25px;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.feed {
+  color: #6E44FF;
+}
+
+.my-button {
+  color: #FFAEC7;
+  background-color: #EF7A85;
+  border-color: #FFAEC7
+}
+
+.nav.navbar-nav li a {
+     color: #EF7A85;
      font-size: 20px;
  }
 
@@ -28,7 +81,7 @@
 
  .jumbotron.hero-spacer {
    background-color: #6E44FF;
-   color: #FFC2E2;
+   color: #B892FF;
  }
 
 ul.navbar-inverse a:hover { color: #FFC2E2 !important; }

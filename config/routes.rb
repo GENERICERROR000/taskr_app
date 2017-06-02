@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :events
 
-  resources :tasks
+  resources :tasks, except: [:index]
   get '/add_task/:id', to: 'tasks#add_task', as: 'add_task'
   post '/add_task/:id', to: 'tasks#add_task'
   get '/complete_task/:id', to: 'tasks#complete_task', as: 'complete_task'
