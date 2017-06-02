@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
     if current_user.manager
       true
     else
-      flash[:error] = "This is something we dont want you doing"
+      flash[:error] = "YOU IS NO MANAGER - CAN'T DO DAT!!"
     end
   end
 
