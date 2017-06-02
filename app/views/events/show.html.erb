@@ -11,9 +11,9 @@
   <br>
   <div class="panel-body card-info-body">
     <h3>Event Start:
-      <%= @event.start_date %></h3>
+      <%= @event.start_date.strftime("%A %B #{@event.start_date.day.ordinalize}, %Y at %l:%M %p") %></h3>
     <h3>Event End:
-      <%= @event.end_date %></h3>
+      <%= @event.end_date.strftime("%A %B #{@event.end_date.day.ordinalize}, %Y at %l:%M %p") %></h3>
   </div>
   <br>
   <% if !@event.locations.nil? %>

@@ -1,6 +1,7 @@
-<h1>Sign In</h1>
-<%=form_tag signin_path do %>
-  <h3>Email: <%=email_field_tag :email%></h3>
-  <h3>Password: <%=password_field_tag :password%></h3>
-  <%=submit_tag "ENTAH"%>
+<h1 class="panel-body card-info-head">Sign In To This Crazy World</h1>
+<br>
+<%=bootstrap_form_tag url: signin_path do |f| %>
+<%=f.email_field :email, placeholder: "Tony", class: "my-form-field ph", label_class: "feed"%>
+  <%=f.password_field :password, placeholder: "@Dragons1 (Don\'t F'n Use This)", class: "my-form-field ph", label_class: "feed"%>
+  <%=f.submit "Entah", class: "btn btn-primary my-button"%>
 <% end %>

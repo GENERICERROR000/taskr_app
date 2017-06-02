@@ -1,19 +1,23 @@
 <h1 class="panel-body card-info-head">Here We Find A List Of All Events - Just Amazing&nbsp&nbsp&nbsp<%= link_to "+ New Event", new_event_path, class: "btn btn-primary my-button" if admin %></h1>
+<br>
 <div class="row text-center">
   <% @events.each do |event| %>
-    <div class="col-md-3 col-sm-6 hero-feature">
-      <div class="thumbnail">
-        <img src="http://lorempixel.com/800/500/abstract/" alt="">
-        <div class="caption">
-      <h3 class="feed"> <%= event.title %></h3>
-      <h5 class="feed">Event Address: <%= event.address %></h5>
-      <h5 class="feed">Start Date: <%= event.start_date %></h5>
-      <h5 class="feed">End Date: <%= event.end_date %></h5>
-          <p class="feed">
-            <%= link_to "Details", event_path(event), class: "btn btn-primary my-button" %>
-          </p>
-        </div>
+  <div class="col-md-3 col-sm-6 hero-feature">
+    <div class="thumbnail">
+      <div class="caption">
+        <h3 class="feed">
+          <%= event.title %></h3>
+        <h5 class="feed">Event Address:
+          <%= event.address %></h5>
+        <h5 class="feed">Start Date:
+          <%= event.start_date.strftime("%A %B #{event.start_date.day.ordinalize}, %Y at %l:%M %p") %></h5>
+        <h5 class="feed">End Date:
+          <%= event.end_date.strftime("%A %B #{event.end_date.day.ordinalize}, %Y at %l:%M %p") %></h5>
+        <p class="feed">
+          <%= link_to "Details", event_path(event), class: "btn btn-primary my-button" %>
+        </p>
       </div>
     </div>
-    <% end %>
+  </div>
+  <% end %>
 </div>

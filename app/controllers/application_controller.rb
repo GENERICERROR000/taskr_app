@@ -7,6 +7,9 @@ class ApplicationController < ActionController::Base
     @tasks = Task.order("updated_at DESC").first(8)
   end
 
+  def about
+  end
+
   private
 
   def admin
@@ -30,7 +33,7 @@ class ApplicationController < ActionController::Base
   end
 
   def already_signed_in
-    if signed_in
+    if session[:user_id]
       redirect_to root_path
     end
   end

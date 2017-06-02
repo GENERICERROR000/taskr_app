@@ -1,25 +1,32 @@
-<h1>WHO IS YOU?</h1>
-<p>Name: <%= @user.name %></p>
-<p>Email: <%= @user.email %></p>
-<p>Phone: <%= @user.phone %></p>
-<p>Manager? <%= @user.manager == true ? 'You Is Manager' : 'You Is Not Manager'  %></p>
+<h1 class="panel-body card-info-head">
+  Who Is You:
+  <%= @user.name %><%= link_to "Edit Account", edit_user_path(id: @user.id), class: "btn btn-primary my-button navbar-right" %><%= button_to 'Delete Account', user_path(@user), method: :delete, class: "btn btn-primary my-button navbar-right" %></h1>
+<div class="panel-body">
+  <div class="panel-body card-info-body">
+    <h3 >Email:
+      <%= @user.email %></h3>
+  </div>
+  <br>
+  <div class="panel-body card-info-body">
+    <h3 >Phone:
+      <%= @user.phone %></h3>
+  </div>
+  <br>
+  <div class="panel-body card-info-body">
+    <h3 >Is You A Manager:
+      <%= @user.manager == true ? 'You Is Manager' : 'You Is Not Manager'%></h3>
+  </div>
+</div>
+<br>
 <div class="simple-calendar">
 
-<%= month_calendar events: @events do |date, event| %>
+  <%= month_calendar events: @events do |date, event| %>
   <%= date.day %>
   <% event.each.with_index(1) do |e, i| %>
-    <div>
-    <%= "-"%> <%= link_to e.title, event_path(e) %>
-    </div>
+  <div>
+    <%= "-"%>
+    <%= link_to e.title, event_path(e) %>
+  </div>
   <% end %>
-<% end %>
-</div>
-
-<div class="row">
-  <div class="col-md-3 col-sm-6">
-  <%= link_to "Edit Account", edit_user_path(id: @user.id), class: "btn btn-primary my-button" %>
-  </div>
-  <div class="col-md-3 col-sm-6">
-  <%= button_to 'Delete Account', user_path(@user), method: :delete, class: "btn btn-primary my-button" %>
-  </div>
+  <% end %>
 </div>

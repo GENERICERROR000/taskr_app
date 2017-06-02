@@ -10,7 +10,8 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  */
- @import 'bootstrap';
+@import 'rails_bootstrap_forms';
+@import 'bootstrap';
 
 .main {
   background-color: #FFC2E2;
@@ -20,6 +21,21 @@
   max-width: 100px;
   margin-top: auto;
 }
+.pics-yo {
+  max-width: 50%;
+  max-height: 200px;
+
+}
+
+.my-about {
+  color: white;
+  background-color: #EF7A85;
+}
+
+.my-land {
+   background-color: #6E44FF;
+   color: #B892FF;
+ }
 
 .btn-primary:hover {
     color: #FFAEC7;
@@ -69,10 +85,20 @@
   color: #6E44FF;
 }
 
+.my-form-field{
+  color: white;
+  background-color: #EF7A85;
+  border-color: #6E44FF;
+}
+
 .my-button {
   color: #FFAEC7;
   background-color: #EF7A85;
   border-color: #FFAEC7
+}
+
+.ph::placeholder {
+  color: #FFC2E2;
 }
 
 .nav.navbar-nav li a {
@@ -84,19 +110,14 @@
    width: auto;
  }
 
- .jumbotron.hero-spacer {
-   background-color: #6E44FF;
-   color: #B892FF;
- }
-
 ul.navbar-inverse a:hover { color: #FFC2E2 !important; }
 
 .simple-calendar {
   table {
     -webkit-border-horizontal-spacing: 0px;
     -webkit-border-vertical-spacing: 0px;
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid rgb(221, 221, 221);
+    background-color: #B892FF;
+    border: 1px solid #6E44FF;
     border-collapse: collapse;
     box-sizing: border-box;
     max-width: 75%;
@@ -109,11 +130,11 @@ ul.navbar-inverse a:hover { color: #FFC2E2 !important; }
 
   th {
     padding: 6px;
-    border-bottom: 2px solid rgb(221, 221, 221);
+    border-bottom: 1px solid #6E44FF;
     border-collapse: collapse;
-    border-left: 1px solid rgb(221, 221, 221);
-    border-right: 1px solid rgb(221, 221, 221);
-    border-top: 0px none rgb(51, 51, 51);
+    border-left: 1px solid #6E44FF;
+    border-right: 1px solid #6E44FF;
+    border-top: 1px solid #6E44FF;
     box-sizing: border-box;
     text-align: left;
   }
@@ -122,18 +143,17 @@ ul.navbar-inverse a:hover { color: #FFC2E2 !important; }
     padding: 6px;
     vertical-align: top;
     width: 14%;
-
-    border: 1px solid #ddd;
-    border-top-color: rgb(221, 221, 221);
+    border: 1px solid #6E44FF;
+    border-top-color: #6E44FF;
     border-top-style: solid;
     border-top-width: 1px;
-    border-right-color: rgb(221, 221, 221);
+    border-right-color: #6E44FF;
     border-right-style: solid;
     border-right-width: 1px;
-    border-bottom-color: rgb(221, 221, 221);
+    border-bottom-color: #6E44FF;
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-left-color: rgb(221, 221, 221);
+    border-left-color: #6E44FF;
     border-left-style: solid;
     border-left-width: 1px;
   }
@@ -151,7 +171,7 @@ ul.navbar-inverse a:hover { color: #FFC2E2 !important; }
   .wday-6 {}
 
   .today {
-    background: blue
+    background: none;
   }
 
   .past {}

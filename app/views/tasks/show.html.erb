@@ -1,16 +1,52 @@
-<h1>YOU GOT TASK</h1>
-<p>Title: <%= @task.title %></p>
-<p>Event: <%= link_to "#{@task.event.title}", event_path(id: @task.event.id) %></p>
-<p>Priority: <%= @task.priority %></p>
-<p>Task Location: <%= @task.task_location %></p>
-<p>End Location: <%= @task.location.name %></p>
-<p>Notes: <%= @task.description %></p>
-<p>Taskr: <%= @task.user.name if @task.user %></p>
-<p>Status: <%= @task.status %></p>
-<%= link_to "Edit", edit_task_path(id: @task.id) %>
-<%= button_to 'Delete', task_path(@task), method: :delete %>
+<h1 class="panel-body card-info-head">
+  Task:
+  <%= @task.title %>
+  <%= link_to "Edit", edit_task_path(id: @task.id), class: "btn btn-primary my-button navbar-right" %>
+  <%= button_to 'Delete', task_path(@task), method: :delete, class: "btn btn-primary my-button navbar-right" %>
+</h1>
 
+<div class="panel-body">
+  <div class="panel-body card-info-body">
+    <h3>Event:
+      <%= link_to "#{@task.event.title}", event_path(id: @task.event.id) %></h3>
+  </div>
+  <br>
 
-<%= link_to "+ Take Task", add_task_path(@task) if @task.status == "open" %>
-<%= link_to "- Drop Task", remove_task_path(@task) if @task.user == current_user && @task.status == "in progress" %>
-<%= link_to "Finished Task", complete_task_path(@task) if @task.user == current_user && @task.status == "in progress" %>
+  <div class="panel-body card-info-body">
+    <h3>Taskr:
+      <%= @task.user.name if @task.user %></h3>
+  </div>
+  <br>
+
+  <div class="panel-body card-info-body">
+    <h3 >Status:
+      <%= @task.status.capitalize %><%= link_to "+ Take Task", add_task_path(@task), class: "btn btn-primary my-button navbar-right" if @task.status == "open" %>
+      <%= link_to "Finished Task", complete_task_path(@task), class: "btn btn-primary my-button navbar-right" if @task.user == current_user && @task.status == "in progress" %></h3>
+      <%= link_to "- Drop Task", remove_task_path(@task), class: "btn btn-primary my-button navbar-right" if @task.user == current_user && @task.status == "in progress" %>
+  </div>
+  <br>
+
+  <div class="panel-body card-info-body">
+    <h3>Priority:
+      <%= @task.priority %></h3>
+  </div>
+  <br>
+
+  <div class="panel-body card-info-body">
+    <h3>Start Location:
+      <%= @task.task_location %></h3>
+  </div>
+  <br>
+
+  <div class="panel-body card-info-body">
+    <h3 >End Location (At Event):
+      <%= @task.location.name %></h3>
+  </div>
+  <br>
+
+  <div class="panel-body card-info-body">
+    <h3>Description:
+      <%= @task.description %></h3>
+  </div>
+  <br>
+</div>
