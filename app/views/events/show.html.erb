@@ -1,55 +1,62 @@
-<% if admin %>
-  <%= link_to "Edit Event", edit_event_path(id: @event.id) %>
-  <%= button_to 'Delete', event_path(@event), method: :delete %>
-<% end %>
-<br>
-    <h1 class="panel-body card-info-head"><%= @event.title %>  <%= link_to "+ New Task", new_task_path(event_id: @event.id), class: "btn btn-primary my-button navbar-right" if admin %> </h1>
-  <div class="panel-body">
-    <div class="panel-body card-info-body">
-    <h3 >Event Address: <%= @event.address %></h3>
+<h1 class="panel-body card-info-head">
+  <%= @event.title %>
+  <%= link_to "Edit Event", edit_event_path(id: @event.id), class: "btn btn-primary my-button navbar-right" if admin %><%= button_to 'Delete Event', event_path(@event), method: :delete,class: "btn btn-primary my-button navbar-right" if admin %>
+</h1>
+
+<div class="panel-body">
+  <div class="panel-body card-info-body">
+    <h3 >Event Address:
+      <%= @event.address %></h3>
   </div>
   <br>
-    <div class="panel-body card-info-body">
-    <h3>Event Start: <%= @event.start_date %></h3>
-    <h3>Event End: <%= @event.end_date %></h3>
-    </div>
-    <br>
-    <% if !@event.locations.nil? %>
-    <div class="panel-body card-info-body">
+  <div class="panel-body card-info-body">
+    <h3>Event Start:
+      <%= @event.start_date %></h3>
+    <h3>Event End:
+      <%= @event.end_date %></h3>
+  </div>
+  <br>
+  <% if !@event.locations.nil? %>
+  <div class="panel-body card-info-body">
     <h3>Locations:</h3>
-      <ol>
-        <% @event.locations.each do |location| %>
-          <li><%= location.name %></li>
-        <% end %>
-      </ol>
+    <ol>
+      <% @event.locations.each do |location| %>
+      <li><%= location.name %></li>
+      <% end %>
+    </ol>
     <% end %>
   </div>
   <br>
-    <div class="panel-body card-info-body">
+  <div class="panel-body card-info-body">
+    <%= link_to "+ New Task", new_task_path(event_id: @event.id), class: "btn btn-primary my-button navbar-right" if admin %>
     <h3>Tasks:</h3>
     <p>&nbsp &nbsp Open:</p>
     <ol>
-    <% @event.tasks.each do |task| %>
+      <% @event.tasks.each do |task| %>
       <% if task.status == "open" %>
-        <li> <%= link_to "#{task.title}", task_path(task) %></li>
+      <li>
+        <%= link_to "#{task.title}", task_path(task) %></li>
       <% end %>
-    <% end %>
+      <% end %>
     </ol>
-    <p>&nbsp &nbsp In Progress:</p>
+    <br>
+    <p>&nbsp &nbsp In Progress:
+    </p>
     <ol>
-    <% @event.tasks.each do |task| %>
+      <% @event.tasks.each do |task| %>
       <% if task.status == "in progress" %>
-        <li><%= link_to "#{task.title}", task_path(task) %></li>
+      <li><%= link_to "#{task.title}", task_path(task) %></li>
       <% end %>
-    <% end %>
+      <% end %>
     </ol>
+    <br>
     <p>&nbsp &nbsp Complete:</p>
     <ol>
-    <% @event.tasks.each do |task| %>
+      <% @event.tasks.each do |task| %>
       <% if task.status == "complete" %>
-        <li><%= link_to "#{task.title}", task_path(task) %></li>
+      <li><%= link_to "#{task.title}", task_path(task) %></li>
       <% end %>
-    <% end %>
+      <% end %>
     </ol>
   </div>
-  </div>
+</div>

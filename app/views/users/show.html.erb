@@ -17,9 +17,9 @@
 
 <div class="row">
   <div class="col-md-3 col-sm-6">
-  <%= link_to "Edit", edit_user_path(id: @user.id), class: "btn btn-primary" %>
+  <%= link_to "Edit Account", edit_user_path(id: @user.id), class: "btn btn-primary my-button" %>
   </div>
   <div class="col-md-3 col-sm-6">
-  <%= button_to 'Delete', user_path(@user), method: :delete, class: "btn btn-primary" %>
+  <%= button_to 'Delete Account', user_path(@user), method: :delete, class: "btn btn-primary my-button" %>
   </div>
 </div>

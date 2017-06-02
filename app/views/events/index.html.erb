@@ -1,8 +1,4 @@
-<h1>THESES ARE ALL THE EVENTS AND THEIR TASKS</h1>
-<% if admin %>
-  <h3><%= link_to "+ New Event", new_event_path, class: "btn btn-primary my-button" %></h3><br>
-<% end %>
-
+<h1 class="panel-body card-info-head">Here We Find A List Of All Events - Just Amazing&nbsp&nbsp&nbsp<%= link_to "+ New Event", new_event_path, class: "btn btn-primary my-button" if admin %></h1>
 <div class="row text-center">
   <% @events.each do |event| %>
     <div class="col-md-3 col-sm-6 hero-feature">
