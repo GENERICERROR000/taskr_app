@@ -32,30 +32,30 @@
     <h3>Tasks:</h3>
     <p>&nbsp &nbsp Open:</p>
     <ol>
-      <% @event.tasks.each do |task| %>
-      <% if task.status == "open" %>
-      <li>
-        <%= link_to "#{task.title}", task_path(task) %></li>
-      <% end %>
+      <% @event.tasks.order("priority").each do |task| %>
+        <% if task.status == "open" %>
+        <li>
+          <%= link_to "#{task.title} - Priority #{task.priority}", task_path(task) %></li>
+        <% end %>
       <% end %>
     </ol>
     <br>
     <p>&nbsp &nbsp In Progress:
     </p>
     <ol>
-      <% @event.tasks.each do |task| %>
-      <% if task.status == "in progress" %>
-      <li><%= link_to "#{task.title}", task_path(task) %></li>
-      <% end %>
+      <% @event.tasks.order("priority").each do |task| %>
+        <% if task.status == "in progress" %>
+        <li><%= link_to "#{task.title} - Priority #{task.priority}", task_path(task) %></li>
+        <% end %>
       <% end %>
     </ol>
     <br>
     <p>&nbsp &nbsp Complete:</p>
     <ol>
-      <% @event.tasks.each do |task| %>
-      <% if task.status == "complete" %>
-      <li><%= link_to "#{task.title}", task_path(task) %></li>
-      <% end %>
+      <% @event.tasks.order("updated_at ").each do |task| %>
+        <% if task.status == "complete" %>
+        <li><%= link_to "#{task.title} - Finished on #{task.updated_at.strftime("%A %B #{@event.end_date.day.ordinalize}, %Y at %l:%M %p")}", task_path(task) %></li>
+        <% end %>
       <% end %>
     </ol>
   </div>
