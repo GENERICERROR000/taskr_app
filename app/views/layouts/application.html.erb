@@ -26,6 +26,7 @@
              <div class="navbar-collapse collapse">
               <% if current_user %>
               <ul class="nav navbar-nav navbar-left">
+                <li class="button"><%= link_to "About", about_path %></li>
                 <li class="button"><%= link_to "Events", events_path %></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">

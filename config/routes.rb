@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   root 'application#home'
 
-  get 'about/', to: 'application#about'
+  get 'about/', to: 'application#about', as: 'about'
+  
   resources :events
 
   resources :tasks, except: [:index]
